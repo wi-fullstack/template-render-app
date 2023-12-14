@@ -1,0 +1,16 @@
+/** AUTHORITIES */
+const ROLE_ANONYMOUS='ROLE_ANONYMOUS';
+const ROLE_CUSTOMER='ROLE_CUSTOMER';
+const ROLE_EMPLOYEE='ROLE_EMPLOYEE';
+const ROLE_ADMIN='ROLE_ADMIN';
+
+
+function getRoles() {
+  return [ROLE_ADMIN, ROLE_EMPLOYEE, ROLE_CUSTOMER, ROLE_ANONYMOUS];
+}
+
+
+module.exports = {
+  getRoles,
+  ROLE_CUSTOMER
+}

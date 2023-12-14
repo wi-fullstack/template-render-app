@@ -1,9 +1,12 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { ROLE_CUSTOMER } = require('../../utils/security.constants')
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
+    const userData = await User.create({
+      role: ROLE_CUSTOMER
+    });
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -39,7 +42,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
