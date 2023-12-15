@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { User } = require('../../models');
 const { ROLE_CUSTOMER } = require('../../utils/security.constants')
 
 router.post('/', async (req, res) => {
