@@ -21,23 +21,20 @@
 
 <div class="bigColumn">
 
+    
     <div class="cardRow">
-        <div class="cardShadow miniCard">
-            <div class="miniCardHeader">
-                Product 1
+        {{#each products}}
+            <div class="cardShadow miniCard">
+                <div class="miniCardHeader">
+                    {{this.name}}
+                    
+                </div>
+                <img src={{this.image}} alt="">
+                <a href="/product/{{this.id}}"></a>
+                <p class="price">${{this.price}}</p>
             </div>
-
-        </div>
-        <div class="cardShadow miniCard">
-            <div class="miniCardHeader">
-                Product 2
-            </div>
-        </div>
-        <div class="cardShadow miniCard">
-            <div class="miniCardHeader">
-                Product 3
-            </div>
-        </div>
+            
+        {{/each}}
     </div>
 
 </div>

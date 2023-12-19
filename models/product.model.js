@@ -21,6 +21,9 @@ Product.init(
     price: {
       type: DataTypes.DECIMAL(10,2),
     },
+    image: {
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,

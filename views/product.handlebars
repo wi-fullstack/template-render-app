@@ -1,1 +1,30 @@
-PRODUCT
+
+<div class="wrapper">
+    <div class="product">
+        <a href="/" class="backButton">
+            <i class="fa-solid fa-arrow-left backButtonArrow"></i>
+        </a>
+        
+        <div class="productImage">
+            <img src={{product.image}} alt="">
+        </div>
+        <div class="productInfo">
+            <div class="productInfo1">
+                <h1>{{product.name}}</h1>
+                <p class="description">{{product.description}}</p>
+            </div>
+
+            <div class="productInfo2 infoText">
+                <p class="priceProduct">${{product.price}}</p>
+                
+                <div class="productButtons infoText">
+                    <button class="buyButton">Buy</button>
+                    <button class="cartButton">Add to Cart</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
