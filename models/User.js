@@ -1,10 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const { ROLE_ADMIN } = require('../utils/security.constants');
 
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
+  }
+  isAdmin() {
+    return ROLE_ADMIN === this.role;
   }
 }
 
