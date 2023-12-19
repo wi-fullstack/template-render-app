@@ -12,6 +12,7 @@ router.get('/product/create', withAuth,(req, res) => {
 });
 
 router.get('/product/edit/:id', withAuth,(req, res) => {
+
   res.render('create-product', {
     productId: req.params.id
   });
