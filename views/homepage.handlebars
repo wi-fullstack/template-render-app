@@ -20,21 +20,30 @@
 </div>
 
 <div class="bigColumn">
+    {{#each productRows}}
+        <div class="cardRow">
+            {{#each this}}
+                <div class="cardShadow miniCard">
+                    <img src={{this.image}} alt="">
+                    <div class="miniCardInfo">
+                        {{this.name}}
+                        <p class="price">${{this.price}}</p>
+                    </div>
 
-    
-    <div class="cardRow">
-        {{#each products}}
-            <div class="cardShadow miniCard">
-                <div class="miniCardHeader">
-                    {{this.name}}
-                    
+                    <p class="description hidden">
+                        {{this.description}}
+                    </p>
+                    <div class="cardIcons">
+                        </a>
+                        <i class="fa-solid fa-cart-plus cardIcon"></i>
+                        <i class="fa-solid fa-heart cardIcon"></i>
+
+                        <i class="fa-solid fa-shop cardIcon">
+                            <a href="/product/{{this.id}}"></a>
+                        </i>
+                    </div>
                 </div>
-                <img src={{this.image}} alt="">
-                <a href="/product/{{this.id}}"></a>
-                <p class="price">${{this.price}}</p>
-            </div>
-            
-        {{/each}}
-    </div>
-
+            {{/each}}
+        </div>
+    {{/each}}
 </div>

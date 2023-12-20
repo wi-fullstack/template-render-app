@@ -3,18 +3,89 @@
         "name" : "Hairdryer",
         "description" : "A hairdryer is a device that blows hot or cold air into damp hair to speed the evaporation of water to dry the hair.",
         "price" : 20.00,
-        "image" : "https://m.media-amazon.com/images/I/71kh1X3PzKL._SL1500_.jpg"
+        "image" : "https://m.media-amazon.com/images/I/71kh1X3PzKL._SL1500_.jpg",
+        "user_id" : 1
     },
     {
         "name" : "Electric Toothbrush",
         "description" : "An electric toothbrush is a toothbrush that makes rapid automatic bristle motions to clean the teeth.",
         "price" : 35.00,
-        "image" : "https://m.media-amazon.com/images/I/513neLIh3ML._SL1400_.jpg"
+        "image" : "https://m.media-amazon.com/images/I/513neLIh3ML._SL1400_.jpg",
+        "user_id" : 1
     },
     {
         "name" : "Wireless Headphones",
         "description" : "Wireless headphones are headphones that connect to a device, such as a smartphone, stereo speaker, television, gaming console, computer, or other electronic devices without using a wire or cable.",
         "price" : 50.00,
-        "image" : "https://m.media-amazon.com/images/I/51rpbVmi9XL._AC_SL1200_.jpg"
+        "image" : "https://m.media-amazon.com/images/I/51rpbVmi9XL._AC_SL1200_.jpg",
+        "user_id" : 1
+    },
+    {
+        "name": "Product 4",
+        "description": "This is a description for product 4.",
+        "price": 60.00,
+        "image": "https://example.com/product4.jpg",
+        "user_id" : 1
+    },
+    {
+        "name": "Product 5",
+        "description": "This is a description for product 5.",
+        "price": 70.00,
+        "image": "https://example.com/product5.jpg",
+        "user_id" : 1
+    },
+    {
+        "name": "Product 6",
+        "description": "This is a description for product 6.",
+        "price": 80.00,
+        "image": "https://example.com/product6.jpg"
+    },
+    {
+        "name": "Product 7",
+        "description": "This is a description for product 7.",
+        "price": 90.00,
+        "image": "https://example.com/product7.jpg"
+    },
+    {
+        "name": "Product 8",
+        "description": "This is a description for product 8.",
+        "price": 100.00,
+        "image": "https://example.com/product8.jpg"
+    },
+    {
+        "name": "Product 9",
+        "description": "This is a description for product 9.",
+        "price": 110.00,
+        "image": "https://example.com/product9.jpg"
+    },
+    {
+        "name": "Product 10",
+        "description": "This is a description for product 10.",
+        "price": 120.00,
+        "image": "https://example.com/product10.jpg"
+    },
+    {
+        "name": "Product 11",
+        "description": "This is a description for product 11.",
+        "price": 130.00,
+        "image": "https://example.com/product11.jpg"
+    },
+    {
+        "name": "Product 12",
+        "description": "This is a description for product 12.",
+        "price": 140.00,
+        "image": "https://example.com/product12.jpg"
+    },
+    {
+        "name": "Product 13",
+        "description": "This is a description for product 13.",
+        "price": 150.00,
+        "image": "https://example.com/product13.jpg"
+    },
+    {
+        "name": "Product 14",
+        "description": "This is a description for product 14.",
+        "price": 160.00,
+        "image": "https://example.com/product14.jpg"
     }
 ]

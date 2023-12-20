@@ -19,4 +19,7 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  divisibleByFive: function(n) {
+    return n % 5 === 4;
+  }
 };

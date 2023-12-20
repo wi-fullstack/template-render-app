@@ -61,6 +61,50 @@ header {
   text-align: center;
   /* Make this font light weight with low letter spacing after font change */
 }
+.cart{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 5;
+  height: 80px;
+  width: 80px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.436);
+  background-color:rgb(30, 76, 128);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  z-index: 2;
+  transition: .3s ease-in-out;
+}
+
+.cartBody{
+
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+  width: 0vw;
+  border-radius: 15px;
+  border: 1px solid rgb(53, 132, 192);
+  height: 60px;
+  background: white;
+  transition: .3s ease-in-out;
+}
+
+.cart:hover{
+  height: 150px;
+  width: 150px;
+  font-size: 50px;
+}
+
+.cart:hover + .cartBody {
+  width: 50vw; /* or whatever display value you want */
+  height: 120px;
+  bottom: 55px;
+}
 
 .contentBlock{
   margin-left: 10%;
@@ -81,35 +125,56 @@ header {
   height: 350px;
   display: flex;
   gap: 2em;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 3.5em;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }
 
 .miniCard{
-  width: 25%;
+  width: 15em;
   position: relative;
   overflow: hidden;
 }
 
-.miniCard img{
-  margin-top: 20%;
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  border-radius: 10px;
+.description {
+  position: absolute;
+  top: 10;
+  left: 40%;
+  width: 40%;
+  opacity: 1; /* Fully visible */
+  visibility: visible;
+  transition: opacity 1s ease-in, visibility 1s ease-in;
 }
 
-.miniCard .price{
+.hidden {
+  opacity: 0; /* Fully transparent */
+  visibility: hidden;
+  transition: visibility 0s ease-in 1s; /* Delay the visibility transition by 1 second */
+}
+
+.miniCard img{
+  width: auto;
+  height: 60%;
+  object-fit: contain;
+  border-radius: 10px;
   position: absolute;
-  top: 10px;
-  right: 0;
-  background-color: rgb(107, 151, 166);
-  color: white;
-  padding: 0.5em;
-  border-radius: 0px 10px 0px 10px;
-  font-weight: bolder;
-  margin-bottom: 0;
+  top:10px;
+  left: 10px;
+}
+
+.miniCardFocus{
+  width: 30%;
+  position: relative;
+}
+
+.miniCardFocus img{
+  width: auto;
+  height: 60%;
+  object-fit: contain;
+  border-radius: 10px;
+  position: absolute;
+  top:10px;
+  left: 10px;
 }
 
 .miniCard a{
@@ -126,10 +191,8 @@ header {
 }
 
 .miniCardHeader{
-  position: absolute;
+
   width: 100%;
-  left: 0;
-  top: 0;
   height: 20%;
   background-color: rgb(107, 151, 166);
   border-radius: 10px 10px 0px 0px;
@@ -138,10 +201,52 @@ header {
   font-weight: bolder;
 }
 
+.miniCardInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.cardIcons{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  gap: 10px;
+  height: 50%;
+  width: 50px;
+  font-size: 25px;
+  justify-content: flex-end;
+}
+
+.cardIcon{
+  width: auto;
+  text-align: center;
+  transition: .3s ease-in-out;
+  position: relative;
+}
+
+.cardIcon:hover{
+  color: rgb(107, 151, 166);
+  cursor: pointer;
+}
+
+.miniCardInfo .price{
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(30, 76, 128);
+}
+
 
 .dropDownParent{
   background-color: white;
-  border: 1px solid rgb(107, 151, 166);
+  border: 1px solid rgb(53, 132, 192);
   border-radius: 5px;
   position: relative;
 }

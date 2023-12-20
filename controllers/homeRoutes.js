@@ -6,16 +6,21 @@ router.get('/', async (req, res) => {
   try {
     const productData = await Product.findAll();
     const products = productData.map((product) => product.get({ plain: true }));
-    console.log(products);
+
+    // Create productRows array
+    let productRows = [];
+    for (let i = 0; i < products.length; i += 5) {
+      productRows.push(products.slice(i, i + 5));
+    }
+
     res.render('homepage', {
       logged_in: req.session.logged_in,
-      products: products
+      productRows: productRows
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 router.get('/product/:id', async (req, res) => {
   try{
     const productData = await Product.findByPk(req.params.id);
@@ -31,17 +36,24 @@ router.get('/product/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] }
+    const userData = await User.findByPk('1', {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Product }] //include user's products
     });
 
     const user = userData.get({ plain: true });
 
+    let productRows = [];
+    for (let i = 0; i < user.Products.length; i += 5) {
+      productRows.push(user.Products.slice(i, i + 5));
+    }
+
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
+      productRows: productRows // Send productRows to the render function
     });
   } catch (err) {
     res.status(500).json(err);
